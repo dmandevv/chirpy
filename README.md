@@ -25,12 +25,14 @@ The service requires the following environment variables in a .env file:
 ### Chirps
 - `POST /api/chirps` - Create new chirp
 - `GET /api/chirps` - List all chirps
+- `GET /api/chirps?author_id=` - List all chirps of a user based on "user_id"
+- `GET /api/chirps?sort=` - List all chirps by date created (default is "asc" for the oldest date first, "desc" for earliest first)
 - `GET /api/chirps/{chirpID}` - Get specific chirp
 - `DELETE /api/chirps/{chirpID}` - Delete specific chirp
 
 ### Admin
 - `GET /admin/metrics` - View site visit metrics
-- `POST /admin/reset` - Reset application state
+- `POST /admin/reset` - Reset application state (deletes and recreates database)
 - `POST /api/polka/webhooks` - Handle Polka webhook events (requires Polka API key)
 
 ### Static Files
