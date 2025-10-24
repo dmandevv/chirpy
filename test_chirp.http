@@ -1,0 +1,32 @@
+
+### Reset the database (only in dev mode)
+POST http://localhost:8080/admin/reset
+
+### add a valid user
+POST http://localhost:8080/api/users
+
+{
+  "email": "user@example.com"
+}
+
+### add an invalid user with empty email
+POST http://localhost:8080/api/users
+
+{
+  "email": ""
+}
+
+
+### post a chirp with profanity filtering
+POST http://localhost:8080/api/chirps
+
+{
+  "body": "Hello, world!",
+  "user_id": "9d795bcc-3ea2-4824-9b55-ba07a66e08fa"
+}
+
+### get all chirps
+GET http://localhost:8080/api/chirps
+
+###get all users
+GET http://localhost:8080/api/users
